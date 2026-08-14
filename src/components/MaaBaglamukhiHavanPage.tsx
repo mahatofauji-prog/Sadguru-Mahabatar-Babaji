@@ -370,7 +370,16 @@ export default function MaaBaglamukhiHavanPage({
           onClick={() => setActiveLightboxIndex(currentHeroIndex)}
           className="relative mb-8 rounded-3xl overflow-hidden border-2 border-gold-500/50 bg-coffee-950 shadow-[0_0_50px_rgba(255,215,0,0.25)] group cursor-pointer"
         >
-          <div className="w-full relative overflow-hidden aspect-[4/3] sm:aspect-[21/9]">
+          <div className="w-full relative overflow-hidden aspect-[4/3] sm:aspect-[21/9] bg-coffee-950 flex items-center justify-center">
+            {/* Ambient Blurred Background to fully cover container without cuts */}
+            <img
+              key={`bg-${currentHeroIndex}`}
+              src={dynamicHavanImages[currentHeroIndex]?.src}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 select-none pointer-events-none"
+            />
+
             <AnimatePresence mode="popLayout">
               <motion.img
                 key={currentHeroIndex}
@@ -380,14 +389,14 @@ export default function MaaBaglamukhiHavanPage({
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0027.jpg';
                 }}
-                initial={{ opacity: 0, scale: 1.05 }}
+                initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-full h-full object-cover object-top sm:object-center absolute inset-0 group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-contain relative z-10 p-2 sm:p-4 group-hover:scale-105 transition-transform duration-700"
               />
             </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-coffee-950/40 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-coffee-950 via-coffee-950/70 to-transparent z-10 pointer-events-none" />
 
             {/* Floating badges */}
             <div className="absolute top-4 left-4 flex flex-wrap items-center gap-2 z-10">
@@ -508,7 +517,14 @@ export default function MaaBaglamukhiHavanPage({
                 onClick={() => setActiveLightboxIndex(idx + 4)}
                 className="group relative rounded-3xl overflow-hidden border-2 border-gold-500/40 bg-coffee-900 shadow-2xl cursor-pointer transition-all duration-500 hover:border-saffron-400 hover:shadow-[0_0_35px_rgba(255,183,3,0.3)]"
               >
-                <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden relative">
+                <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden relative bg-coffee-950 flex items-center justify-center">
+                  {/* Ambient Blurred Background to fully cover box */}
+                  <img
+                    src={img.src}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-125 select-none pointer-events-none"
+                  />
                   <img
                     src={img.src}
                     alt={img.title}
@@ -516,23 +532,23 @@ export default function MaaBaglamukhiHavanPage({
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0027.jpg';
                     }}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain relative z-10 p-2 group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-coffee-950/30 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
+                  <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-coffee-950 via-coffee-950/60 to-transparent z-10 pointer-events-none" />
 
                   {/* Badge & Zoom Icon */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
+                  <div className="absolute top-4 left-4 flex items-center gap-2 z-20">
                     <span className="bg-saffron-500/90 text-coffee-50 font-extrabold text-xs px-3 py-1 rounded-full shadow-lg border border-gold-300">
                       {img.tag}
                     </span>
                   </div>
 
-                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-coffee-950/80 backdrop-blur-md border border-gold-500/50 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform">
+                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-coffee-950/80 backdrop-blur-md border border-gold-500/50 flex items-center justify-center text-gold-300 group-hover:scale-110 transition-transform z-20">
                     <Maximize2 size={16} />
                   </div>
 
                   {/* Caption Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 text-left">
+                  <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 text-left z-20">
                     <h4 className="font-serif text-lg sm:text-xl font-bold text-gold-200 group-hover:text-gold-100 transition-colors mb-1">
                       {img.title}
                     </h4>
@@ -870,7 +886,14 @@ export default function MaaBaglamukhiHavanPage({
                   onClick={() => setActiveLightboxIndex(idx)}
                   className="group relative bg-coffee-900/80 rounded-2xl overflow-hidden border border-gold-500/30 shadow-lg cursor-pointer hover:border-gold-400 hover:shadow-[0_0_25px_rgba(255,215,0,0.25)] transition-all duration-300 flex flex-col justify-between"
                 >
-                  <div className="aspect-[4/3] w-full overflow-hidden relative bg-coffee-950">
+                  <div className="aspect-[4/3] w-full overflow-hidden relative bg-coffee-950 flex items-center justify-center">
+                    {/* Ambient Blurred Background */}
+                    <img
+                      src={img.src}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-125 select-none pointer-events-none"
+                    />
                     <img
                       src={img.src}
                       alt={img.title}
@@ -878,15 +901,15 @@ export default function MaaBaglamukhiHavanPage({
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0024.jpg';
                       }}
-                      className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-500"
+                      className="w-full h-full object-contain relative z-10 p-1.5 group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-coffee-950/80 via-transparent to-transparent z-10 pointer-events-none" />
 
-                    <span className="absolute top-3 left-3 bg-coffee-950/80 backdrop-blur-md text-saffron-300 font-bold text-[10px] px-2.5 py-0.5 rounded-md border border-gold-500/30">
+                    <span className="absolute top-3 left-3 bg-coffee-950/80 backdrop-blur-md text-saffron-300 font-bold text-[10px] px-2.5 py-0.5 rounded-md border border-gold-500/30 z-20">
                       {img.tag}
                     </span>
 
-                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-coffee-950/80 backdrop-blur-md border border-gold-500/40 flex items-center justify-center text-gold-300 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all">
+                    <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-coffee-950/80 backdrop-blur-md border border-gold-500/40 flex items-center justify-center text-gold-300 opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all z-20">
                       <Maximize2 size={14} />
                     </div>
                   </div>
@@ -1003,8 +1026,14 @@ export default function MaaBaglamukhiHavanPage({
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="max-h-[75vh] max-w-full flex items-center justify-center rounded-2xl overflow-hidden border-2 border-gold-500/40 shadow-[0_0_50px_rgba(255,215,0,0.2)] bg-coffee-950"
+                className="max-h-[75vh] max-w-full flex items-center justify-center rounded-2xl overflow-hidden border-2 border-gold-500/40 shadow-[0_0_50px_rgba(255,215,0,0.2)] bg-coffee-950 relative"
               >
+                <img
+                  src={dynamicHavanImages[activeLightboxIndex].src}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-30 scale-125 select-none pointer-events-none"
+                />
                 <img
                   src={dynamicHavanImages[activeLightboxIndex].src}
                   alt={dynamicHavanImages[activeLightboxIndex].title}
@@ -1012,7 +1041,7 @@ export default function MaaBaglamukhiHavanPage({
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0027.jpg';
                   }}
-                  className="max-h-[75vh] max-w-full object-contain rounded-xl"
+                  className="max-h-[75vh] max-w-full object-contain rounded-xl relative z-10 p-1 sm:p-2"
                 />
               </motion.div>
 
