@@ -17,6 +17,7 @@ export interface ImageState {
   headerLogo: string;
   footerLogo: string;
   whatsappQr: string;
+  donationQr: string;
 
   // Homepage / Hero Banner
   heroBg: string;
@@ -107,6 +108,7 @@ export const DEFAULT_IMAGES: ImageState = {
   headerLogo: '/logo.png',
   footerLogo: '/logo.png',
   whatsappQr: '/assets/whatsapp_qr.jpg',
+  donationQr: '/assets/IMG_20260814_190611.jpg',
 
   heroBg: '/hero-bg.jpg',
   heroPortrait: '/assets/hero-portrait-new.png',
@@ -203,6 +205,7 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'headerLogo', page: 'मुख्य नेविगेशन (Header)', section: 'Header', title: 'वेबसाइट मुख्य लोगो (Header Logo)', description: 'ऊपरी नेविगेशन बार में दिखाई देने वाला मुख्य लोगो', defaultUrl: '/logo.png' },
   { key: 'footerLogo', page: 'फुटर (Footer)', section: 'Footer', title: 'फुटर संस्था लोगो (Footer Logo)', description: 'नीचे फुटर में प्रदर्शित संस्था का प्रतीक चिन्ह', defaultUrl: '/logo.png' },
   { key: 'whatsappQr', page: 'संपर्क व सहायता (Contact)', section: 'WhatsApp QR', title: 'व्हाट्सएप चैनल क्यूआर (WhatsApp QR Code)', description: 'डायरेक्ट व्हाट्सएप ग्रुप व चैट के लिए स्कैन करने योग्य क्यूआर फोटो', defaultUrl: '/assets/whatsapp_qr.jpg' },
+  { key: 'donationQr', page: 'दान व सहयोग (Donation)', section: 'UPI Payment QR', title: 'दान भुगतान क्यूआर कोड (Donation UPI QR)', description: 'दान हेतु UPI स्कैन व पे के लिए क्यूआर कोड', defaultUrl: '/assets/IMG_20260814_190611.jpg' },
 
   // Homepage / Hero Banner
   { key: 'heroBg', page: 'होमपेज (Homepage)', section: 'Hero Section', title: 'होमपेज पृष्ठभूमि फोटो (Hero Background)', description: 'वेबसाइट के मुख्य बैनर का बैकग्राउंड चित्र', defaultUrl: '/hero-bg.jpg' },
@@ -282,7 +285,7 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'testimonial3', page: 'साधक अनुभव (Testimonials)', section: 'Testimonial 3', title: 'साधक अनुभव चित्र 3 (Sadhak 3)', description: 'तृतीय साधक अनुभव कार्ड का चित्र', defaultUrl: '/assets/indian_sadhak_new3.jpg' }
 ];
 
-const LOCAL_STORAGE_KEY = 'saral_dhyan_images_v35';
+const LOCAL_STORAGE_KEY = 'saral_dhyan_images_v40';
 
 interface ImageContextType {
   images: ImageState;
@@ -387,6 +390,7 @@ const sanitizeImageState = (state: ImageState): ImageState => {
         key === 'aboutGuruji' ||
         key === 'aboutBabaji' ||
         key === 'guruPortrait' ||
+        key === 'donationQr' ||
         val.includes('/assets/official_seal.png') ||
         val.includes('/assets/signature.png') ||
         val.includes('/assets/IMG-20260804-WA0008.jpg') ||

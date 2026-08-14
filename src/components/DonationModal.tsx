@@ -37,6 +37,7 @@ import {
   DonationRecord
 } from '../types/donation';
 import { useDonationContext } from '../context/DonationContext';
+import { useImageContext } from '../context/ImageContext';
 import { DonationReceipt } from './DonationReceipt';
 
 interface DonationModalProps {
@@ -47,6 +48,7 @@ interface DonationModalProps {
 
 export default function DonationModal({ isOpen, onClose, defaultPurpose }: DonationModalProps) {
   const { addDonation, checkDuplicateUtr, donations } = useDonationContext();
+  const { getImageUrl } = useImageContext();
 
   const [step, setStep] = useState<'FORM' | 'CHECKOUT' | 'VERIFYING' | 'PENDING_SUBMITTED' | 'TRACK_STATUS'>('FORM');
 
@@ -649,11 +651,11 @@ export default function DonationModal({ isOpen, onClose, defaultPurpose }: Donat
                   {/* QR Code Image */}
                   <div className="w-56 h-56 sm:w-64 sm:h-64 p-3 bg-white rounded-2xl shadow-[0_0_25px_rgba(212,175,55,0.3)] border-2 border-saffron-500 mx-auto overflow-hidden flex flex-col items-center justify-center">
                     <img 
-                      src="/assets/qr-code.jpg" 
+                      src={getImageUrl('donationQr') || '/assets/IMG_20260814_190611.jpg'} 
                       alt="Donation UPI QR Code" 
                       className="w-full h-full object-contain"
                       onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = "/assets/donation_qr.jpg";
+                        (e.currentTarget as HTMLImageElement).src = "/assets/IMG_20260814_190611.jpg";
                       }}
                     />
                   </div>
