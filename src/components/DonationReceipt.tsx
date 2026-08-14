@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { DonationRecord } from '../types/donation';
 import { downloadElementAsPNG, downloadElementAsPDF } from '../utils/exportHelper';
+import { useImageContext } from '../context/ImageContext';
 
 interface DonationReceiptProps {
   receipt: DonationRecord;
@@ -34,6 +35,7 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
   onClose,
   showActions = true
 }) => {
+  const { getImageUrl } = useImageContext();
   const receiptRef = useRef<HTMLDivElement>(null);
   const [isDownloadingPng, setIsDownloadingPng] = useState(false);
   const [isDownloadingPdf, setIsDownloadingPdf] = useState(false);
@@ -314,10 +316,19 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
         {/* 1. RECEIPT HEADER */}
         <div className="text-center border-b-2 border-[#d4af37]/60 pb-5 mb-5 relative">
           <div className="flex items-center justify-between gap-3 sm:gap-4 mb-3">
-            {/* Peeth Logo / Sacred Crest */}
-            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#d4af37] via-[#f39c12] to-[#b45309] p-0.5 shadow-md shrink-0 flex items-center justify-center">
-              <div className="w-full h-full rounded-full bg-[#fffdf9] flex items-center justify-center border border-[#d4af37]">
-                <span className="font-serif text-2xl sm:text-3xl font-extrabold text-[#b45309]">ॐ</span>
+            {/* Official Website Logo */}
+            <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-[#d4af37] via-[#f39c12] to-[#b45309] p-0.5 shadow-md shrink-0 flex items-center justify-center">
+              <div className="w-full h-full rounded-[14px] bg-[#fffdf9] p-1 flex items-center justify-center border border-[#d4af37]/60 overflow-hidden">
+                <img
+                  src={getImageUrl('headerLogo') || '/logo.png'}
+                  alt="Sadguru Mahavatar Babaji Official Logo"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/logo.png';
+                  }}
+                />
               </div>
             </div>
 

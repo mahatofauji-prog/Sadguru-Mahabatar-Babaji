@@ -192,10 +192,10 @@ export const AcknowledgementReceipt: React.FC<AcknowledgementReceiptProps> = ({ 
               <div className="w-16 h-16 bg-white rounded-full p-1 flex items-center justify-center shrink-0 shadow-md border-2 border-gold-300">
                 <img 
                   crossOrigin="anonymous" referrerPolicy="no-referrer"
-                  src={getImageUrl('certOrgLogo') || "/logo.png"} 
-                  alt="Logo" 
+                  src={getImageUrl('headerLogo') || getImageUrl('certOrgLogo') || "/logo.png"} 
+                  alt="Sadguru Mahavatar Babaji Official Logo" 
                   className="w-12 h-12 object-contain" 
-                  onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&w=100&h=100&q=80'; }} 
+                  onError={(e) => { (e.currentTarget as HTMLImageElement).src = '/logo.png'; }} 
                 />
               </div>
               <div>
