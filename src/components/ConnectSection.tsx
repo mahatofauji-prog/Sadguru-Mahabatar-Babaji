@@ -187,22 +187,23 @@ export default function ConnectSection({ onOpenDonate, onOpenContact }: ConnectS
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-6 glass-panel p-8 sm:p-10 rounded-3xl border-2 border-gold-500/40 flex flex-col items-center justify-center text-center shadow-2xl relative"
+            className="lg:col-span-6 glass-panel p-6 sm:p-10 rounded-3xl border-2 border-gold-500/40 flex flex-col items-center justify-center text-center shadow-2xl relative"
           >
-            <div className="absolute top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full bg-saffron-500/20 border border-saffron-500/40 text-saffron-300 flex items-center gap-1">
-              <ShieldCheck size={14} />
+            {/* Top Badge: Certified Spiritual Center (Normal Flow, No Overlap) */}
+            <div className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-saffron-500/20 border border-saffron-500/40 text-saffron-300 text-[11px] sm:text-xs font-semibold tracking-wide mb-4 sm:mb-5 max-w-full shadow-sm">
+              <ShieldCheck size={14} className="text-saffron-400 shrink-0" />
               <span>प्रमाणित आध्यात्मिक केंद्र</span>
             </div>
 
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-gold-300 mb-2">
+            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-gold-300 mb-2.5 leading-tight">
               तुरंत WhatsApp से जुड़ें
             </h3>
-            <p className="text-sm text-gold-200/80 mb-6 max-w-md font-sans">
+            <p className="text-xs sm:text-sm text-gold-200/80 mb-6 max-w-md font-sans leading-relaxed">
               Scan the QR Code to join our official Saral Dhyan Yog WhatsApp channel and receive daily meditation guidance.
             </p>
 
             {/* QR Code Container */}
-            <div className="p-4 bg-white rounded-2xl border-4 border-gold-500 shadow-[0_0_25px_rgba(212,175,55,0.3)] mb-6 flex items-center justify-center">
+            <div className="p-3.5 sm:p-4 bg-white rounded-2xl border-4 border-gold-500 shadow-[0_0_25px_rgba(212,175,55,0.3)] mb-6 flex items-center justify-center">
               <img
                 src={getImageUrl('whatsappQr') || '/assets/whatsapp_qr.jpg'}
                 alt="WhatsApp QR Code"
@@ -215,7 +216,7 @@ export default function ConnectSection({ onOpenDonate, onOpenContact }: ConnectS
               href="https://wa.me/919422163066"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-base shadow-xl transition-all flex items-center gap-2 hover:scale-105 mb-4"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl bg-green-600 hover:bg-green-500 text-white font-bold text-sm sm:text-base shadow-xl transition-all flex items-center justify-center gap-2 hover:scale-105 mb-4"
             >
               <MessageCircle size={20} />
               <span>Direct WhatsApp Chat (+91 94221 63066)</span>
