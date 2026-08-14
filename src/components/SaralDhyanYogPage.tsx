@@ -49,9 +49,9 @@ const DHIVYA_MOMENTS = [
     english: 'Sadguru Discourse & Guidance'
   },
   {
-    src: '/assets/IMG-20260811-WA0059.jpg',
-    title: 'साधकों के साथ दिव्य सत्संग वार्ता',
-    english: 'Divine Satsang Interaction'
+    src: '/assets/IMG-20260811-WA0055.jpg',
+    title: 'सरल ध्यान योग प्रस्तावना एवं मार्गदर्शन',
+    english: 'Saral Dhyan Yog Introduction & Guidance'
   },
   {
     src: '/assets/IMG-20260811-WA0060.jpg',
@@ -479,8 +479,11 @@ export default function SaralDhyanYogPage({
                       </div>
                       <img
                         src={activeMoments[5 % activeMoments.length].src}
-                        alt="Sadguru Discourse"
+                        alt="Saral Dhyan Yog Introduction"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0055.jpg';
+                        }}
                         className="w-full h-full object-contain rounded-lg transition-transform duration-500 group-hover:scale-105 relative z-10"
                       />
                     </div>
@@ -531,8 +534,11 @@ export default function SaralDhyanYogPage({
                       </div>
                       <img
                         src={activeMoments[5 % activeMoments.length].src}
-                        alt="Sadguru Discourse"
+                        alt="Saral Dhyan Yog Introduction"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0055.jpg';
+                        }}
                         className="w-full h-full object-contain rounded-lg transition-transform duration-500 group-hover:scale-105 relative z-10"
                       />
                     </div>

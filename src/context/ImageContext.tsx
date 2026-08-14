@@ -121,8 +121,8 @@ export const DEFAULT_IMAGES: ImageState = {
   visionSection: '/IMG-20260811-WA0053.jpg',
   seva1Image: '/assets/IMG-20260811-WA0039.jpg',
   seva2Image: '/assets/IMG-20260811-WA0044.jpg',
-  seva3Image: '/assets/IMG-20260811-WA0045.jpg',
-  seva4Image: '/assets/IMG-20260811-WA0046.jpg',
+  seva3Image: '/assets/IMG-20260811-WA0042.jpg',
+  seva4Image: '/assets/IMG-20260811-WA0026.jpg',
   seva5Image: '/assets/IMG-20260811-WA0047.jpg',
   seva6Image: '/assets/IMG-20260811-WA0048.jpg',
   seva7Image: '/assets/IMG-20260811-WA0051.jpg',
@@ -133,23 +133,23 @@ export const DEFAULT_IMAGES: ImageState = {
   baglamukhiImg2: '/assets/IMG-20260811-WA0023.jpg',
   baglamukhiImg3: '/assets/IMG-20260811-WA0026.jpg',
   baglamukhiImg4: '/assets/IMG-20260811-WA0028.jpg',
-  baglamukhiImg5: '/assets/IMG-20260811-WA0029.jpg',
-  baglamukhiImg6: '/assets/IMG-20260811-WA0030.jpg',
-  baglamukhiImg7: '/assets/IMG-20260804-WA0037.jpg',
-  baglamukhiImg8: '/assets/IMG-20260811-WA0024.jpg',
-  baglamukhiImg9: '/assets/IMG-20260811-WA0027.jpg',
-  baglamukhiImg10: '/assets/IMG-20260811-WA0023.jpg',
-  baglamukhiImg11: '/assets/IMG-20260811-WA0026.jpg',
-  baglamukhiImg12: '/assets/IMG-20260811-WA0028.jpg',
-  baglamukhiImg13: '/assets/IMG-20260811-WA0029.jpg',
-  baglamukhiImg14: '/assets/IMG-20260811-WA0030.jpg',
+  baglamukhiImg5: '/assets/IMG-20260811-WA0030.jpg',
+  baglamukhiImg6: '/assets/IMG-20260804-WA0037.jpg',
+  baglamukhiImg7: '/assets/IMG-20260811-WA0024.jpg',
+  baglamukhiImg8: '/assets/IMG-20260811-WA0027.jpg',
+  baglamukhiImg9: '/assets/IMG-20260811-WA0023.jpg',
+  baglamukhiImg10: '/assets/IMG-20260811-WA0026.jpg',
+  baglamukhiImg11: '/assets/IMG-20260811-WA0028.jpg',
+  baglamukhiImg12: '/assets/IMG-20260811-WA0030.jpg',
+  baglamukhiImg13: '/assets/IMG-20260804-WA0037.jpg',
+  baglamukhiImg14: '/assets/IMG-20260811-WA0024.jpg',
 
   dhyanYogHero1: '/assets/IMG-20260811-WA0053.jpg',
   dhyanYogHero2: '/assets/IMG-20260811-WA0054.jpg',
   dhyanYogHero3: '/assets/IMG-20260811-WA0056.jpg',
   dhyanYogHero4: '/assets/IMG-20260811-WA0057.jpg',
   dhyanYogHero5: '/assets/IMG-20260811-WA0058.jpg',
-  dhyanYogSection1: '/assets/IMG-20260811-WA0059.jpg',
+  dhyanYogSection1: '/assets/IMG-20260811-WA0055.jpg',
   dhyanYogSection2: '/assets/IMG-20260811-WA0060.jpg',
   dhyanYogSection3: '/assets/IMG-20260811-WA0061.jpg',
   dhyanYogSection4: '/assets/IMG-20260811-WA0062.jpg',
@@ -182,7 +182,7 @@ export const DEFAULT_IMAGES: ImageState = {
   galleryImages: [
     {
       id: 'gallery_default_1',
-      src: '/assets/IMG-20260806-WA0004-1.jpg',
+      src: '/assets/IMG-20260806-WA0004.jpg',
       title: 'दिव्य दर्शन',
       category: 'babaji',
     }
@@ -221,8 +221,8 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'visionSection', page: 'ग्लोबल विज़न (Global Vision)', section: 'Vision Section', title: 'दिव्य संकल्प एवं लक्ष्य चित्र (Global Vision Image)', description: 'ग्लोबल विज़न एवं संस्था के संकल्पों को दर्शाने वाला चित्र', defaultUrl: '/IMG-20260811-WA0053.jpg' },
   { key: 'seva1Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva 1', title: 'सेवा I: आश्रम निर्माण (Guru Seva Dham)', description: 'नाशिक/त्र्यंबकेश्वर गुरु सेवा धाम परियोजना का चित्र', defaultUrl: '/assets/IMG-20260811-WA0039.jpg' },
   { key: 'seva2Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva 2', title: 'सेवा II: भारतीय गोवंश (Gaushala Seva)', description: 'गऊशाला एवं देशी गोवंश संरक्षण परियोजना चित्र', defaultUrl: '/assets/IMG-20260811-WA0044.jpg' },
-  { key: 'seva3Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva 3', title: 'सेवा III: वृद्ध नागरिक सेवा (Abhay Dham)', description: 'ज्येष्ठ नागरिक सेवा धाम परियोजना चित्र', defaultUrl: '/assets/IMG-20260811-WA0045.jpg' },
-  { key: 'seva4Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva 4', title: 'सेवा IV: वैदिक अनुष्ठान (Mantra Yajna)', description: 'वैदिक मंत्र यज्ञ व अनुष्ठान सेवा चित्र', defaultUrl: '/assets/IMG-20260811-WA0046.jpg' },
+  { key: 'seva3Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva 3', title: 'सेवा III: वृद्ध नागरिक सेवा (Elderly Sanctuary / Abhay Dham)', description: 'ज्येष्ठ नागरिक सेवा धाम परियोजना चित्र', defaultUrl: '/assets/IMG-20260811-WA0042.jpg' },
+  { key: 'seva4Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva 4', title: 'सेवा IV: वैदिक अनुष्ठान (Abhedya Mantra Yajnas / Cosmic Sound Science)', description: 'वैदिक मंत्र यज्ञ व अनुष्ठान सेवा चित्र', defaultUrl: '/assets/IMG-20260811-WA0026.jpg' },
   { key: 'seva5Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva Gallery 1', title: 'सेवा गैलरी चित्र 1', description: 'सेवा प्रकल्प का अन्य चित्र 1', defaultUrl: '/assets/IMG-20260811-WA0047.jpg' },
   { key: 'seva6Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva Gallery 2', title: 'सेवा गैलरी चित्र 2', description: 'सेवा प्रकल्प का अन्य चित्र 2', defaultUrl: '/assets/IMG-20260811-WA0048.jpg' },
   { key: 'seva7Image', page: 'सेवा कार्य (Seva Initiatives)', section: 'Global Seva Gallery 3', title: 'सेवा गैलरी चित्र 3', description: 'सेवा प्रकल्प का अन्य चित्र 3', defaultUrl: '/assets/IMG-20260811-WA0051.jpg' },
@@ -234,16 +234,16 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'baglamukhiImg2', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 2', title: '2. पावन यज्ञ कुण्ड एवं आहुति', description: 'पावन यज्ञ कुण्ड एवं आहुति अनुष्ठान चित्र', defaultUrl: '/assets/IMG-20260811-WA0023.jpg' },
   { key: 'baglamukhiImg3', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 3', title: '3. पूर्णाहुति एवं शक्तिपात', description: 'पूर्णाहुति एवं शक्तिपात आशीर्वाद चित्र', defaultUrl: '/assets/IMG-20260811-WA0026.jpg' },
   { key: 'baglamukhiImg4', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 4', title: '4. सामूहिक साधना एवं सानिध्य', description: 'सामूहिक साधना एवं दिव्य सानिध्य चित्र', defaultUrl: '/assets/IMG-20260811-WA0028.jpg' },
-  { key: 'baglamukhiImg5', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 5', title: '5. भक्तिमयी साधना', description: 'सामूहिक साधना की भक्तिमयी सहभागिता', defaultUrl: '/assets/IMG-20260811-WA0029.jpg' },
-  { key: 'baglamukhiImg6', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 6', title: '6. दिव्य सानिध्य', description: 'सरल ध्यान योग पीठ में दिव्य हवन चित्र', defaultUrl: '/assets/IMG-20260811-WA0030.jpg' },
-  { key: 'baglamukhiImg7', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 7', title: '7. विशेष हवन झलक', description: 'माँ बगलामुखी विशेष हवन की पावन झलक', defaultUrl: '/assets/IMG-20260804-WA0037.jpg' },
-  { key: 'baglamukhiImg8', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 8', title: '8. दिव्य हवन दर्शन', description: 'माँ बगलामुखी विशेष हवन दिव्य दर्शन', defaultUrl: '/assets/IMG-20260811-WA0024.jpg' },
-  { key: 'baglamukhiImg9', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 9', title: '9. विशेष अनुष्ठान', description: 'विशेष अनुष्ठान व आराधना चित्र', defaultUrl: '/assets/IMG-20260811-WA0027.jpg' },
-  { key: 'baglamukhiImg10', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 10', title: '10. सामूहिक साधना सहभागिता', description: 'साधकों की सामूहिक साधना सहभागिता चित्र', defaultUrl: '/assets/IMG-20260811-WA0023.jpg' },
-  { key: 'baglamukhiImg11', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 11', title: '11. हवन आहुति समर्पण', description: 'हवन में पावन आहुति समर्पण चित्र', defaultUrl: '/assets/IMG-20260811-WA0026.jpg' },
-  { key: 'baglamukhiImg12', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 12', title: '12. यज्ञ नारायण दर्शन', description: 'पावन यज्ञ नारायण व अग्निदेव दर्शन', defaultUrl: '/assets/IMG-20260811-WA0028.jpg' },
-  { key: 'baglamukhiImg13', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 13', title: '13. दिव्य दर्शन झलक', description: 'माँ बगलामुखी महायज्ञ दिव्य दर्शन', defaultUrl: '/assets/IMG-20260811-WA0029.jpg' },
-  { key: 'baglamukhiImg14', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 14', title: '14. पावन सानिध्य चित्र', description: 'स्वामी जी महाराज का पावन सानिध्य चित्र', defaultUrl: '/assets/IMG-20260811-WA0030.jpg' },
+  { key: 'baglamukhiImg5', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 5', title: '5. दिव्य सानिध्य', description: 'सरल ध्यान योग पीठ में दिव्य हवन चित्र', defaultUrl: '/assets/IMG-20260811-WA0030.jpg' },
+  { key: 'baglamukhiImg6', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 6', title: '6. विशेष हवन झलक', description: 'माँ बगलामुखी विशेष हवन की पावन झलक', defaultUrl: '/assets/IMG-20260804-WA0037.jpg' },
+  { key: 'baglamukhiImg7', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 7', title: '7. दिव्य हवन दर्शन', description: 'माँ बगलामुखी विशेष हवन दिव्य दर्शन', defaultUrl: '/assets/IMG-20260811-WA0024.jpg' },
+  { key: 'baglamukhiImg8', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 8', title: '8. मुख्य दर्शन चित्र', description: 'अभेद्य माँ बगलामुखी विशेष हवन - मुख्य दर्शन', defaultUrl: '/assets/IMG-20260811-WA0027.jpg' },
+  { key: 'baglamukhiImg9', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 9', title: '9. पावन यज्ञ कुण्ड एवं आहुति', description: 'पावन यज्ञ कुण्ड एवं आहुति अनुष्ठान चित्र', defaultUrl: '/assets/IMG-20260811-WA0023.jpg' },
+  { key: 'baglamukhiImg10', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 10', title: '10. सामूहिक साधना सहभागिता', description: 'साधकों की सामूहिक साधना सहभागिता चित्र', defaultUrl: '/assets/IMG-20260811-WA0026.jpg' },
+  { key: 'baglamukhiImg11', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 11', title: '11. हवन आहुति समर्पण', description: 'हवन में पावन आहुति समर्पण चित्र', defaultUrl: '/assets/IMG-20260811-WA0028.jpg' },
+  { key: 'baglamukhiImg12', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 12', title: '12. दिव्य सानिध्य', description: 'सरल ध्यान योग पीठ में दिव्य हवन चित्र', defaultUrl: '/assets/IMG-20260811-WA0030.jpg' },
+  { key: 'baglamukhiImg13', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 13', title: '13. विशेष हवन झलक', description: 'माँ बगलामुखी विशेष हवन की पावन झलक', defaultUrl: '/assets/IMG-20260804-WA0037.jpg' },
+  { key: 'baglamukhiImg14', page: 'मां बगलामुखी अनुष्ठान (Havan Page)', section: 'Havan Photo 14', title: '14. दिव्य हवन दर्शन', description: 'माँ बगलामुखी विशेष हवन दिव्य दर्शन', defaultUrl: '/assets/IMG-20260811-WA0024.jpg' },
 
   // Saral Dhyan Yog Page
   { key: 'dhyanYogHero1', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Hero Slider 1', title: '1. सद्गुरु देव ध्यान साधना दर्शन', description: 'ध्यान योग प्रथम मुख्य चित्र व स्लाइडर 1', defaultUrl: '/assets/IMG-20260811-WA0053.jpg' },
@@ -251,7 +251,7 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'dhyanYogHero3', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Hero Slider 3', title: '3. सामूहिक शून्यता ध्यान शिविर', description: 'ध्यान योग तृतीय मुख्य चित्र व स्लाइडर 3', defaultUrl: '/assets/IMG-20260811-WA0056.jpg' },
   { key: 'dhyanYogHero4', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Hero Slider 4', title: '4. दिव्य शक्तिपात एवं प्राण संचार', description: 'साधना एवं क्रिया योग चतुर्थ मुख्य चित्र', defaultUrl: '/assets/IMG-20260811-WA0057.jpg' },
   { key: 'dhyanYogHero5', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Hero Slider 5', title: '5. सद्गुरु प्रवचन एवं मार्गदर्शन', description: 'सद्गुरु देव का पावन प्रवचन एवं मार्गदर्शन', defaultUrl: '/assets/IMG-20260811-WA0058.jpg' },
-  { key: 'dhyanYogSection1', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Section Photo 1', title: '6. साधकों के साथ दिव्य सत्संग वार्ता', description: 'साधकों के साथ दिव्य सत्संग वार्ता चित्र', defaultUrl: '/assets/IMG-20260811-WA0059.jpg' },
+  { key: 'dhyanYogSection1', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Section Photo 1', title: '6. प्रस्तावना: सरल ध्यान योग परिचय (Introduction Image)', description: 'प्रस्तावना सेक्शन का मुख्य पावन चित्र', defaultUrl: '/assets/IMG-20260811-WA0055.jpg' },
   { key: 'dhyanYogSection2', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Section Photo 2', title: '7. अखंड शांति ध्यान ऊर्जा क्षेत्र', description: 'अखंड शांति ध्यान ऊर्जा क्षेत्र दर्शन चित्र', defaultUrl: '/assets/IMG-20260811-WA0060.jpg' },
   { key: 'dhyanYogSection3', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Section Photo 3', title: '8. शून्यता ध्यान साधना', description: 'शून्यता ध्यान साधना दर्शन', defaultUrl: '/assets/IMG-20260811-WA0061.jpg' },
   { key: 'dhyanYogSection4', page: 'सरल ध्यान योग (Dhyan Yog Page)', section: 'Section Photo 4', title: '9. प्राण योग क्रिया', description: 'प्राण योग क्रिया दर्शन', defaultUrl: '/assets/IMG-20260811-WA0062.jpg' },
@@ -285,7 +285,7 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'testimonial3', page: 'साधक अनुभव (Testimonials)', section: 'Testimonial 3', title: 'साधक अनुभव चित्र 3 (Sadhak 3)', description: 'तृतीय साधक अनुभव कार्ड का चित्र', defaultUrl: '/assets/indian_sadhak_new3.jpg' }
 ];
 
-const LOCAL_STORAGE_KEY = 'saral_dhyan_images_v40';
+const LOCAL_STORAGE_KEY = 'saral_dhyan_images_v61';
 
 interface ImageContextType {
   images: ImageState;
@@ -391,6 +391,11 @@ const sanitizeImageState = (state: ImageState): ImageState => {
         key === 'aboutBabaji' ||
         key === 'guruPortrait' ||
         key === 'donationQr' ||
+        key === 'seva3Image' ||
+        key === 'seva4Image' ||
+        key === 'dhyanYogSection1' ||
+        val.includes('/assets/IMG-20260811-WA0045.jpg') ||
+        val.includes('/assets/IMG-20260811-WA0046.jpg') ||
         val.includes('/assets/official_seal.png') ||
         val.includes('/assets/signature.png') ||
         val.includes('/assets/IMG-20260804-WA0008.jpg') ||
@@ -406,6 +411,23 @@ const sanitizeImageState = (state: ImageState): ImageState => {
       }
     }
   });
+  if (Array.isArray(sanitized.galleryImages)) {
+    sanitized.galleryImages = sanitized.galleryImages.map((g) => {
+      if (
+        !g ||
+        !g.src ||
+        typeof g.src !== 'string' ||
+        g.src.includes('IMG-20260806-WA0004-1') ||
+        g.src.includes('IMG-20260806-WA0004-2') ||
+        g.src.includes('IMG-20260806-WA0004-3')
+      ) {
+        return { ...g, src: '/assets/IMG-20260806-WA0004.jpg' };
+      }
+      return g;
+    });
+  } else {
+    sanitized.galleryImages = DEFAULT_IMAGES.galleryImages;
+  }
   return sanitized;
 };
 

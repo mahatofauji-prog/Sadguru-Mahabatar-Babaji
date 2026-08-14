@@ -86,24 +86,35 @@ export default function GlobalSeva({ onOpenDonate }: GlobalSevaProps) {
               className="glass-card-glow rounded-3xl border-2 border-gold-500/30 flex flex-col justify-between group bg-coffee-950/80 shadow-xl relative overflow-hidden"
             >
               {seva.image && (
-                <div className="h-64 w-full overflow-hidden relative border-b border-gold-500/30">
+                <div className="h-64 sm:h-72 w-full overflow-hidden relative border-b border-gold-500/30 bg-coffee-950 flex items-center justify-center">
+                  {/* Ambient Blurred Background to fill the entire box without gaps */}
+                  <img
+                    src={seva.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-45 scale-125 select-none pointer-events-none"
+                  />
+                  {/* Foreground Complete Uncropped Image */}
                   <img
                     src={seva.image}
                     alt={seva.hindiTitle}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0042.jpg';
+                    }}
+                    className="w-full h-full object-contain relative z-10 p-1 transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-coffee-950/90 via-coffee-900/20 to-transparent"></div>
+                  <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-coffee-950 via-coffee-950/40 to-transparent z-10 pointer-events-none"></div>
                 </div>
               )}
               
               <div className="p-8 flex-1 flex flex-col">
                 {/* Header with Icon and Numeral */}
-                <div className="flex items-center justify-between mb-6 -mt-14 relative z-10">
-                  <div className="px-3.5 py-1 rounded-full bg-coffee-900 border border-gold-500/40 text-gold-300 font-serif font-extrabold text-sm shadow-md">
+                <div className="flex items-center justify-between mb-6 -mt-10 relative z-20">
+                  <div className="px-3.5 py-1 rounded-full bg-coffee-900 border border-gold-500/40 text-gold-300 font-serif font-extrabold text-sm shadow-lg">
                     Seva {seva.num}
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-coffee-900 border border-gold-400 flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 rounded-full bg-coffee-900 border border-gold-400 flex items-center justify-center shadow-lg">
                     {seva.icon}
                   </div>
                 </div>
@@ -149,15 +160,21 @@ export default function GlobalSeva({ onOpenDonate }: GlobalSevaProps) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="rounded-2xl overflow-hidden border border-gold-500/30 aspect-[4/3] group relative"
+                  className="rounded-2xl overflow-hidden border border-gold-500/30 aspect-[4/3] group relative bg-coffee-950 flex items-center justify-center shadow-lg"
                 >
+                  <img
+                    src={src}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover blur-xl opacity-40 scale-125 select-none pointer-events-none"
+                  />
                   <img
                     src={src}
                     alt={`Seva Gallery ${idx + 1}`}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-contain relative z-10 p-1 transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-saffron-500/0 group-hover:bg-saffron-500/10 transition-colors duration-500"></div>
+                  <div className="absolute inset-0 bg-saffron-500/0 group-hover:bg-saffron-500/10 transition-colors duration-500 z-20 pointer-events-none"></div>
                 </motion.div>
               ))}
             </div>

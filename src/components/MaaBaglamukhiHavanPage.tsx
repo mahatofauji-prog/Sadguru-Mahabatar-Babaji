@@ -67,15 +67,6 @@ const HAVAN_IMAGES = [
   },
   {
     id: '5',
-    src: '/assets/IMG-20260811-WA0029.jpg',
-    title: 'हवन आहुति एवं जाप',
-    titleEn: 'Havan Ahuti & Chanting',
-    caption: 'माँ बगलामुखी के बीज मंत्रों के साथ हवन कुण्ड में आहुति',
-    captionEn: 'Offering Ahutis in Havan Kund with Maa Baglamukhi Beej Mantras',
-    tag: 'साधना'
-  },
-  {
-    id: '6',
     src: '/assets/IMG-20260811-WA0030.jpg',
     title: 'दिव्य सानिध्य',
     titleEn: 'Spiritual Presence',
@@ -84,7 +75,7 @@ const HAVAN_IMAGES = [
     tag: 'सानिध्य'
   },
   {
-    id: '7',
+    id: '6',
     src: '/assets/IMG-20260804-WA0037.jpg',
     title: 'माँ बगलामुखी विशेष हवन',
     titleEn: 'Maa Baglamukhi Vishesh Havan',
@@ -93,7 +84,7 @@ const HAVAN_IMAGES = [
     tag: 'हवन'
   },
   {
-    id: '8',
+    id: '7',
     src: '/assets/IMG-20260811-WA0024.jpg',
     title: 'दिव्य हवन दर्शन',
     titleEn: 'Divine Havan Darshan',
@@ -141,7 +132,7 @@ export default function MaaBaglamukhiHavanPage({
   });
 
   const userUploadedBaglamukhi = images.galleryImages.filter(
-    (img) => img.category === 'baglamukhi' || img.category === 'babaji'
+    (img) => img.category === 'baglamukhi'
   );
 
   const dynamicHavanImages = [
@@ -160,7 +151,7 @@ export default function MaaBaglamukhiHavanPage({
   ];
 
   useEffect(() => {
-    const maxHero = Math.min(5, dynamicHavanImages.length);
+    const maxHero = Math.min(4, dynamicHavanImages.length);
     if (maxHero <= 1) return;
     const interval = setInterval(() => {
       setCurrentHeroIndex((prev) => (prev + 1) % maxHero);
@@ -386,6 +377,9 @@ export default function MaaBaglamukhiHavanPage({
                 src={dynamicHavanImages[currentHeroIndex]?.src}
                 alt={dynamicHavanImages[currentHeroIndex]?.title}
                 referrerPolicy="no-referrer"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0027.jpg';
+                }}
                 initial={{ opacity: 0, scale: 1.05 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -435,7 +429,7 @@ export default function MaaBaglamukhiHavanPage({
 
               {/* Dots indicator */}
               <div className="flex gap-2 mt-4" onClick={(e) => e.stopPropagation()}>
-                {Array.from({ length: Math.min(5, dynamicHavanImages.length) }).map((_, idx) => (
+                {Array.from({ length: Math.min(4, dynamicHavanImages.length) }).map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentHeroIndex(idx)}
@@ -508,10 +502,10 @@ export default function MaaBaglamukhiHavanPage({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {dynamicHavanImages.slice(5, 7).map((img, idx) => (
+            {dynamicHavanImages.slice(4, 6).map((img, idx) => (
               <div
                 key={img.id}
-                onClick={() => setActiveLightboxIndex(idx)}
+                onClick={() => setActiveLightboxIndex(idx + 4)}
                 className="group relative rounded-3xl overflow-hidden border-2 border-gold-500/40 bg-coffee-900 shadow-2xl cursor-pointer transition-all duration-500 hover:border-saffron-400 hover:shadow-[0_0_35px_rgba(255,183,3,0.3)]"
               >
                 <div className="aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden relative">
@@ -519,6 +513,9 @@ export default function MaaBaglamukhiHavanPage({
                     src={img.src}
                     alt={img.title}
                     referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0027.jpg';
+                    }}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-coffee-950/30 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
@@ -860,13 +857,12 @@ export default function MaaBaglamukhiHavanPage({
               </div>
               <span className="inline-flex items-center gap-1.5 text-xs font-bold text-saffron-300 bg-saffron-500/15 border border-saffron-500/30 px-3.5 py-1.5 rounded-full self-start sm:self-auto">
                 <Sparkles size={14} />
-                कुल {dynamicHavanImages.slice(7).length} अन्य पावन चित्र ({dynamicHavanImages.slice(7).length} Other Sacred Photos)
+                कुल {dynamicHavanImages.length} पावन चित्र ({dynamicHavanImages.length} Sacred Photos)
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {dynamicHavanImages.slice(7).map((img, index) => {
-                const idx = index + 7;
+              {dynamicHavanImages.map((img, idx) => {
                 return (
                 <motion.div
                   key={img.id}
@@ -879,6 +875,9 @@ export default function MaaBaglamukhiHavanPage({
                       src={img.src}
                       alt={img.title}
                       referrerPolicy="no-referrer"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0024.jpg';
+                      }}
                       className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-coffee-950 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
@@ -1010,6 +1009,9 @@ export default function MaaBaglamukhiHavanPage({
                   src={dynamicHavanImages[activeLightboxIndex].src}
                   alt={dynamicHavanImages[activeLightboxIndex].title}
                   referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/assets/IMG-20260811-WA0027.jpg';
+                  }}
                   className="max-h-[75vh] max-w-full object-contain rounded-xl"
                 />
               </motion.div>

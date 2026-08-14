@@ -87,7 +87,7 @@ export default function Hero({ onOpenDonate, onOpenMembership }: HeroProps) {
                 <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto rounded-full p-2 bg-gradient-to-br from-[#FFD700] via-[#D4AF37] to-[#FF8000] shadow-[0_0_50px_rgba(212,175,55,0.5)]">
                   <div className="w-full h-full rounded-full overflow-hidden border-2 border-[#120804] bg-[#2c1a15]">
                     <img
-                      src={getImageUrl('heroPortrait') || '/assets/IMG-20260806-WA0004-1.jpg'}
+                      src={getImageUrl('heroPortrait') || '/assets/IMG-20260806-WA0004.jpg'}
                       alt="Sadguru Mahavatar Babaji & Guruji"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
