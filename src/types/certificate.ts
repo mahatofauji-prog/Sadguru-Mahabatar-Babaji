@@ -13,7 +13,7 @@ export const CERTIFICATE_DEFINITIONS: Omit<Certificate, 'imageUrl' | 'updatedAt'
     id: 'pan',
     name: 'स्थायी खाता संख्या (PAN)',
     englishName: 'PAN No.',
-    number: 'ABITS96708',
+    number: 'ABITS9670B',
     description: 'आयकर विभाग, भारत सरकार द्वारा जारी किया गया स्थायी खाता प्रमाणपत्र।'
   },
   {

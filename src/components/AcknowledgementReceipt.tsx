@@ -201,7 +201,15 @@ export const AcknowledgementReceipt: React.FC<AcknowledgementReceiptProps> = ({ 
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold font-serif leading-tight">सरल ध्यान योग पीठ</h1>
                 <p className="text-saffron-100 text-xs sm:text-sm font-sans font-medium">SADGURU MAHAVATAR BABAJI SARAL DHYAN YOG PEETH</p>
-                <p className="text-[10px] text-saffron-200 font-sans">NGO & Charitable Trust Registered | Nashik & Trimbakeshwar</p>
+                <div className="flex flex-wrap gap-x-2 text-[10px] text-saffron-200 font-sans mt-0.5 font-mono">
+                  <span>PAN: ABITS9670B</span>
+                  <span>•</span>
+                  <span>80G: ABITS9670BF20241</span>
+                  <span>•</span>
+                  <span>12A: ABITS9670BE20241</span>
+                  <span>•</span>
+                  <span>Reg: E0001698 (NSK)</span>
+                </div>
               </div>
             </div>
           </div>

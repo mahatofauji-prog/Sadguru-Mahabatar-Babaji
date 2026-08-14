@@ -313,7 +313,7 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
 
         {/* 1. RECEIPT HEADER */}
         <div className="text-center border-b-2 border-[#d4af37]/60 pb-5 mb-5 relative">
-          <div className="flex items-center justify-between gap-3 sm:gap-4 mb-2.5">
+          <div className="flex items-center justify-between gap-3 sm:gap-4 mb-3">
             {/* Peeth Logo / Sacred Crest */}
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#d4af37] via-[#f39c12] to-[#b45309] p-0.5 shadow-md shrink-0 flex items-center justify-center">
               <div className="w-full h-full rounded-full bg-[#fffdf9] flex items-center justify-center border border-[#d4af37]">
@@ -321,26 +321,16 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
               </div>
             </div>
 
-            {/* Title & Trust Info */}
+            {/* Organization Name & Title */}
             <div className="flex-1 text-center">
-              <span className="text-[10px] sm:text-xs tracking-widest text-[#c2410c] font-black uppercase block mb-0.5">
+              <span className="text-[10px] sm:text-xs tracking-widest text-[#c2410c] font-black uppercase block mb-1">
                 ॥ श्री 1008 महावतार बाबाजी विजयतेतराम् ॥
               </span>
-              <h1 className="font-serif text-lg sm:text-2xl md:text-3xl font-extrabold text-[#3b1e0d] leading-tight tracking-tight">
-                सदगुरू महावतार बाबाजी सरल ध्यान योग पीठ
+              <h1 className="font-serif text-lg sm:text-2xl md:text-3xl font-black text-[#2b1408] leading-tight tracking-tight uppercase">
+                SADGURU MAHAVATAR BABAJI SARAL DHYAN YOG PEETH
               </h1>
-              <p className="text-xs sm:text-sm font-bold text-[#5c3316] mt-0.5">
-                श्री महावतार बाबाजी चैरिटेबल ट्रस्ट (Shri Mahavatar Babaji Charitable Trust)
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-x-2 text-[10px] sm:text-[11px] font-sans font-semibold text-[#6e411b] mt-1">
-                <span>Regd. Public Charitable Trust: E-4092/2026</span>
-                <span>•</span>
-                <span className="text-[#b45309] font-bold">80G Tax Exemption Certified</span>
-                <span>•</span>
-                <span>NITI Aayog Darpan Registered</span>
-              </div>
-              <p className="text-[10px] text-[#7a5432] font-sans mt-0.5">
-                पंचवटी आश्रम, नासिक, महाराष्ट्र - 422005 | Email: donations@mahavatarbabaji.org | Helplines: +91 83084 44455, +91 94221 63066
+              <p className="font-serif text-xs sm:text-sm font-bold text-[#5c3316] mt-0.5">
+                सदगुरू महावतार बाबाजी सरल ध्यान योग पीठ
               </p>
             </div>
 
@@ -348,14 +338,75 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
             <div className="hidden sm:flex flex-col items-center shrink-0">
               <div className="w-14 h-14 rounded-full bg-[#faeedb] border-2 border-[#d4af37] flex flex-col items-center justify-center text-[#9a3412] shadow-sm">
                 <ShieldCheck size={24} className="text-[#c2410c]" />
-                <span className="text-[8px] font-bold uppercase tracking-tight text-[#6e411b]">80G Valid</span>
+                <span className="text-[8px] font-bold uppercase tracking-tight text-[#6e411b]">80G & 12A</span>
               </div>
               <span className="text-[9px] text-[#5c3316] mt-1 font-bold">आधिकारिक रसीद</span>
             </div>
           </div>
 
+          {/* OFFICIAL REGISTRATION & TAX DETAILS SECTION */}
+          <div className="my-3.5 bg-[#fbf5ed] border-2 border-[#dfc699] rounded-2xl p-3.5 sm:p-4 shadow-sm text-left">
+            <div className="text-[11px] sm:text-xs font-serif font-bold text-[#8a5327] uppercase tracking-wider mb-2.5 text-center sm:text-left border-b border-[#ebd8bb] pb-1.5 flex flex-wrap items-center justify-between gap-2">
+              <span className="flex items-center gap-1.5 text-[#3b1e0d]">
+                <ShieldCheck size={15} className="text-[#c2410c]" />
+                <span>आधिकारिक पंजीकरण एवं कर विवरण (Official Registration Details)</span>
+              </span>
+              <span className="text-[10px] font-sans font-bold text-[#c2410c] bg-[#faeedb] px-2.5 py-0.5 rounded-full border border-[#d4af37]">
+                Govt. Registered Public Trust
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs sm:text-[13px] font-sans">
+              <div className="flex items-baseline justify-between sm:justify-start gap-2 bg-[#fffdf9] p-2 rounded-lg border border-[#ebd8bb]">
+                <span className="text-[#8a5327] font-bold text-xs shrink-0">PAN No.:</span>
+                <span className="font-mono font-extrabold text-[#2b1408] text-xs sm:text-sm tracking-wide">
+                  ABITS9670B
+                </span>
+              </div>
+
+              <div className="flex items-baseline justify-between sm:justify-start gap-2 bg-[#fffdf9] p-2 rounded-lg border border-[#ebd8bb]">
+                <span className="text-[#8a5327] font-bold text-xs shrink-0">80G:</span>
+                <span className="font-mono font-extrabold text-[#2b1408] text-xs sm:text-sm tracking-wide">
+                  ABITS9670BF20241
+                </span>
+              </div>
+
+              <div className="flex items-baseline justify-between sm:justify-start gap-2 bg-[#fffdf9] p-2 rounded-lg border border-[#ebd8bb]">
+                <span className="text-[#8a5327] font-bold text-xs shrink-0">12A:</span>
+                <span className="font-mono font-extrabold text-[#2b1408] text-xs sm:text-sm tracking-wide">
+                  ABITS9670BE20241
+                </span>
+              </div>
+
+              <div className="flex items-baseline justify-between sm:justify-start gap-2 bg-[#fffdf9] p-2 rounded-lg border border-[#ebd8bb]">
+                <span className="text-[#8a5327] font-bold text-xs shrink-0">NITI AAYOG:</span>
+                <span className="font-mono font-extrabold text-[#2b1408] text-xs sm:text-sm tracking-wide">
+                  MH/2024/0413297
+                </span>
+              </div>
+
+              <div className="flex items-baseline justify-between sm:justify-start gap-2 bg-[#fffdf9] p-2 rounded-lg border border-[#ebd8bb]">
+                <span className="text-[#8a5327] font-bold text-xs shrink-0">Trust Registration No.:</span>
+                <span className="font-mono font-extrabold text-[#2b1408] text-xs sm:text-sm tracking-wide">
+                  E0001698 (NSK)
+                </span>
+              </div>
+
+              <div className="flex items-baseline justify-between sm:justify-start gap-2 bg-[#fffdf9] p-2 rounded-lg border border-[#ebd8bb]">
+                <span className="text-[#8a5327] font-bold text-xs shrink-0">E-ANUDDAN:</span>
+                <span className="font-mono font-extrabold text-[#2b1408] text-xs sm:text-sm tracking-wide">
+                  MH/00036058
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-[10px] sm:text-[11px] text-[#6e411b] font-sans mt-1">
+            पंचवटी आश्रम, नासिक, महाराष्ट्र - 422005 | Email: donations@mahavatarbabaji.org | Helplines: +91 83084 44455, +91 94221 63066
+          </p>
+
           {/* Golden Ribbon Banner for Title */}
-          <div className="inline-block px-6 sm:px-8 py-1.5 bg-gradient-to-r from-[#faeedb] via-[#f7e0bc] to-[#faeedb] border-2 border-[#c59b27] rounded-full shadow-sm mt-1">
+          <div className="inline-block px-6 sm:px-8 py-1.5 bg-gradient-to-r from-[#faeedb] via-[#f7e0bc] to-[#faeedb] border-2 border-[#c59b27] rounded-full shadow-sm mt-2">
             <h2 className="font-serif text-xs sm:text-sm md:text-base font-extrabold text-[#3d1d0a] tracking-wide uppercase">
               दान एवं सेवा सहयोग पावन रसीद (OFFICIAL 80G DONATION RECEIPT)
             </h2>
@@ -588,8 +639,8 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
               <Award size={14} className="text-[#c2410c] mb-0.5" />
               <span className="font-bold text-[8.5px] text-[#3b1e0d]">★ बाबाजी पीठ ★</span>
               <span className="text-[7.5px] font-bold">महावतार बाबाजी</span>
-              <span className="font-bold text-[7px] text-[#9a3412]">चैरिटेबल ट्रस्ट</span>
-              <span className="text-[6.5px] text-[#7a5432] uppercase">Official Seal</span>
+              <span className="font-bold text-[7px] text-[#9a3412]">सरल ध्यान योग पीठ</span>
+              <span className="text-[6.5px] text-[#7a5432] uppercase font-mono">Reg: E0001698</span>
             </div>
 
             {/* Signature Area */}
@@ -601,7 +652,7 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
                 अधिकृत हस्ताक्षरकर्ता (Authorized Signatory)
               </span>
               <span className="text-[9px] text-[#7a5432] font-semibold block">
-                Shri Mahavatar Babaji Charitable Trust
+                Sadguru Mahavatar Babaji Saral Dhyan Yog Peeth
               </span>
             </div>
           </div>
@@ -609,7 +660,7 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
 
         {/* 7. FOOTER DISCLAIMER */}
         <div className="mt-4 pt-3 border-t border-[#eedbc5] text-center text-[9px] sm:text-[10px] text-[#7a5432] font-sans leading-relaxed">
-          यह रसीद आयकर अधिनियम 1961 की धारा 80G के अंतर्गत कर छूट (Tax Exemption) हेतु पूर्णतः मान्य है। This is an authentic digital donation receipt issued under the authority of Shri Mahavatar Babaji Charitable Trust. Website: www.mahavatarbabaji.org
+          यह रसीद आयकर अधिनियम 1961 की धारा 80G (पंजीकरण सं.: ABITS9670BF20241) एवं 12A (पंजीकरण सं.: ABITS9670BE20241) के अंतर्गत कर छूट (Tax Exemption) हेतु पूर्णतः मान्य है। PAN: ABITS9670B | NITI Aayog: MH/2024/0413297 | Trust Reg. No.: E0001698 (NSK) | E-Anuddan: MH/00036058 | Official Website: www.mahavatarbabaji.org
         </div>
       </div>
     </div>
