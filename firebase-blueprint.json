@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "site_images": {
+      "title": "Site Images",
+      "description": "Global images uploaded for website sections and gallery",
+      "properties": {
+        "url": { "type": "string" },
+        "items": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "site_content": {
+      "title": "Site Content",
+      "description": "Global customizable text content for peeth website sections",
+      "properties": {
+        "topBar": { "type": "object" },
+        "hero": { "type": "object" },
+        "about": { "type": "object" },
+        "guru": { "type": "object" },
+        "seva": { "type": "object" },
+        "contact": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "youtube_videos": {
+      "title": "YouTube Videos",
+      "description": "Dynamic YouTube videos managed via Admin Portal",
+      "properties": {
+        "url": { "type": "string" },
+        "videoId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "displayOrder": { "type": "number" },
+        "isPublished": { "type": "boolean" },
+        "isFeatured": { "type": "boolean" },
+        "thumbnailUrl": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "certificates": {
+      "title": "Certificates and Registrations",
+      "description": "Certificates and registrations documents uploaded and managed via Admin Portal",
+      "properties": {
+        "imageUrl": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  }
+}
