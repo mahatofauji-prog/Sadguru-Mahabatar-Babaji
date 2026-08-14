@@ -96,9 +96,9 @@ export interface ImageState {
   galleryImages: GalleryItem[];
 }
 
-export const DEFAULT_OFFICIAL_SEAL = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><circle cx="100" cy="100" r="95" fill="none" stroke="%23b45309" stroke-width="4"/><circle cx="100" cy="100" r="88" fill="%23fef3c7" stroke="%2392400e" stroke-width="2" stroke-dasharray="6,3"/><circle cx="100" cy="100" r="75" fill="none" stroke="%23b45309" stroke-width="2"/><path id="top" d="M 25,100 A 75,75 0 0,1 175,100" fill="none"/><text font-family="serif" font-size="12" font-weight="bold" fill="%2378350f" text-anchor="middle"><textPath href="%23top" startOffset="50%">सरल ध्यान योग पीठ • उत्तराखंड</textPath></text><path id="bot" d="M 175,100 A 75,75 0 0,1 25,100" fill="none"/><text font-family="serif" font-size="11" font-weight="bold" fill="%2378350f" text-anchor="middle"><textPath href="%23bot" startOffset="50%">★ OFFICIAL SEAL ★</textPath></text><g transform="translate(100, 100) scale(0.85)"><circle cx="0" cy="0" r="42" fill="%2378350f"/><circle cx="0" cy="0" r="38" fill="%23fef3c7" stroke="%23b45309" stroke-width="1.5"/><text x="0" y="-8" font-family="serif" font-size="16" font-weight="bold" fill="%2378350f" text-anchor="middle">ॐ</text><text x="0" y="8" font-family="serif" font-size="9" font-weight="bold" fill="%2392400e" text-anchor="middle">APPROVED</text><text x="0" y="20" font-family="sans-serif" font-size="7" fill="%23b45309" text-anchor="middle">PEETH REGD.</text></g></svg>`;
+export const DEFAULT_OFFICIAL_SEAL = '/images/trust-seal.png';
 
-export const DEFAULT_AUTHORIZED_SIGNATURE = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80"><path d="M 10 45 C 20 20, 35 15, 45 45 C 50 60, 60 25, 70 35 C 80 45, 85 15, 100 40 C 110 55, 120 20, 135 30 C 145 40, 160 10, 175 45 C 185 30, 200 25, 220 35" fill="none" stroke="%231e3a8a" stroke-width="2.5" stroke-linecap="round"/><path d="M 25 55 Q 110 65 210 52" fill="none" stroke="%231e3a8a" stroke-width="1.8" stroke-linecap="round"/><text x="120" y="73" font-family="serif" font-size="11" font-weight="bold" fill="%231e3a8a" text-anchor="middle">Swami Yoganand</text></svg>`;
+export const DEFAULT_AUTHORIZED_SIGNATURE = '/images/trust-signature.jpg';
 
 export const DEFAULT_IMAGES: ImageState = {
   headerLogo: '/logo.png',
@@ -263,8 +263,8 @@ export const IMAGE_REGISTRY: ImageRegistryMeta[] = [
   { key: 'futureProject15', page: 'आगामी परियोजनाएं (Future Projects)', section: 'Project 15', title: 'परियोजना 15: हरित ऊर्जा सौर विद्युत संयंत्र', description: 'पर्यावरण अनुकूल सोलर एनर्जी प्लांट प्रोजेक्ट', defaultUrl: '/images/future-projects/IMG-20260804-WA0024.jpg' },
 
   // Certificate & ID Card Seals
-  { key: 'certOfficialSeal', page: 'प्रमाणपत्र व आईडी कार्ड (Certificates)', section: 'Official Seal', title: 'संस्था आधिकारिक सील (Official Seal)', description: 'प्रमाणपत्र एवं आईडी कार्ड पर लगने वाली आधिकारिक संस्था मुहर', defaultUrl: '/assets/official_seal.png' },
-  { key: 'certAuthorizedSignature', page: 'प्रमाणपत्र व आईडी कार्ड (Certificates)', section: 'Authorized Signature', title: 'संस्थापक अधिकृत हस्ताक्षर (Signature)', description: 'सदस्यता व दान प्रमाणपत्र पर प्रिंट होने वाला डिजिटल हस्ताक्षर', defaultUrl: '/assets/signature.png' },
+  { key: 'certOfficialSeal', page: 'प्रमाणपत्र व आईडी कार्ड (Certificates)', section: 'Official Seal', title: 'संस्था आधिकारिक सील (Official Seal)', description: 'प्रमाणपत्र एवं आईडी कार्ड पर लगने वाली आधिकारिक संस्था मुहर', defaultUrl: '/images/trust-seal.png' },
+  { key: 'certAuthorizedSignature', page: 'प्रमाणपत्र व आईडी कार्ड (Certificates)', section: 'Authorized Signature', title: 'संस्थापक अधिकृत हस्ताक्षर (Signature)', description: 'सदस्यता व दान प्रमाणपत्र पर प्रिंट होने वाला डिजिटल हस्ताक्षर', defaultUrl: '/images/trust-signature.jpg' },
   { key: 'certOrgLogo', page: 'प्रमाणपत्र व आईडी कार्ड (Certificates)', section: 'Certificate Logo', title: 'प्रमाणपत्र संस्था लोगो (Org Logo)', description: 'रसीद व प्रमाणपत्रों के शीर्ष पर छपने वाला लोगो', defaultUrl: '/logo.png' },
 
   // Testimonial Avatars
@@ -377,6 +377,8 @@ const sanitizeImageState = (state: ImageState): ImageState => {
         val === 'undefined' ||
         val.includes('/assets/official_seal.png') ||
         val.includes('/assets/signature.png') ||
+        (key === 'certOfficialSeal' && (val.startsWith('data:image/svg+xml') || val.includes('APPROVED'))) ||
+        (key === 'certAuthorizedSignature' && (val.startsWith('data:image/svg+xml') || val.includes('Swami Yoganand'))) ||
         (typeof val === 'string' && val.includes('/images/saral-dhyan-yog/'))
       ) {
         (sanitized as any)[key] = DEFAULT_IMAGES[key as keyof typeof DEFAULT_IMAGES];

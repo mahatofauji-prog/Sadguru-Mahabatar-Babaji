@@ -390,24 +390,48 @@ export const DigitalIdCard: React.FC<DigitalIdCardProps> = ({ member, onClose })
           </div>
         </div>
 
-        {/* Footer Area - QR Code & Authorized Stamp / Signature */}
+        {/* Footer Area - QR Code & Authorized Official Stamp / Signature */}
         <div className="relative z-10 pt-2 border-t border-gold-500/40 flex items-center justify-between gap-2">
           {/* QR Code */}
-          <div className="bg-white p-1.5 rounded-xl border border-gold-400/80 shadow-md shrink-0">
-            <QRCodeCanvas value={qrVerificationData} size={60} level="M" />
+          <div className="bg-white p-1 rounded-xl border border-gold-400/80 shadow-md shrink-0">
+            <QRCodeCanvas value={qrVerificationData} size={54} level="M" />
           </div>
 
-          {/* Official Seal & Signature Placeholder */}
+          {/* Official Seal Image */}
+          <div className="w-14 h-14 flex items-center justify-center shrink-0">
+            <img
+              src={getImageUrl('certOfficialSeal') || '/images/trust-seal.png'}
+              alt="Official Seal"
+              crossOrigin="anonymous"
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-contain filter drop-shadow-sm"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = '/images/trust-seal.png';
+              }}
+            />
+          </div>
+
+          {/* Official Signature Area */}
           <div className="flex flex-col items-end text-right">
-            <div className="text-[9px] text-saffron-300 font-sans font-semibold border border-gold-500/30 px-2 py-0.5 rounded bg-coffee-950/90 mb-1">
-              प्रमाणित डिजिटल कार्ड
+            <div className="h-8 w-24 flex items-end justify-end mb-0.5">
+              <img
+                src={getImageUrl('certAuthorizedSignature') || '/images/trust-signature.jpg'}
+                alt="Authorized Signature"
+                crossOrigin="anonymous"
+                referrerPolicy="no-referrer"
+                className="max-h-full max-w-full object-contain brightness-110"
+                onError={(e) => {
+                  (e.currentTarget as HTMLImageElement).src = '/images/trust-signature.jpg';
+                }}
+              />
             </div>
-            {/* Signature Line */}
-            <div className="text-[10px] font-serif text-gold-200 border-b border-gold-400/60 pb-0.5 px-1 font-bold">
-              स्वामी डॉ. निर्मल जी महाराज (अध्यक्ष)
-            </div>
-            <div className="text-[8px] text-gold-300/70 mt-0.5 font-sans">
-              सरल ध्यान योग पीठ
+            <div className="border-t border-gold-400/60 pt-0.5 text-right w-28">
+              <div className="text-[9px] font-serif text-gold-200 font-bold leading-none">
+                स्वामी डॉ. निर्मल जी
+              </div>
+              <div className="text-[7.5px] text-gold-300/80 font-sans">
+                अध्यक्ष, सरल ध्यान योग पीठ
+              </div>
             </div>
           </div>
         </div>

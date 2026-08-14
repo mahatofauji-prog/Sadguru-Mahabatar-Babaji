@@ -356,10 +356,19 @@ export const AcknowledgementReceipt: React.FC<AcknowledgementReceiptProps> = ({ 
             {/* Footer Signatures */}
             <div className="mt-8 flex justify-between items-end border-t border-gray-200 pt-6 font-sans">
               <div className="text-center">
-                <div className="w-20 h-20 rounded-full border-2 border-dashed border-amber-500/60 bg-amber-50 flex items-center justify-center mx-auto mb-1">
-                  <span className="text-[9px] text-amber-800 font-bold rotate-12 uppercase leading-tight">OFFICIAL<br/>PEETH SEAL</span>
+                <div className="w-20 h-20 flex items-center justify-center mx-auto mb-1">
+                  <img
+                    src={getImageUrl('certOfficialSeal') || '/images/trust-seal.png'}
+                    alt="Official Seal"
+                    crossOrigin="anonymous"
+                    referrerPolicy="no-referrer"
+                    className="max-w-full max-h-full object-contain filter drop-shadow-sm"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/images/trust-seal.png';
+                    }}
+                  />
                 </div>
-                <p className="text-[11px] font-bold text-gray-500">Authorized Stamp</p>
+                <p className="text-[11px] font-bold text-amber-900">Official Trust Seal</p>
               </div>
 
               <div className="text-center max-w-[240px]">
@@ -370,10 +379,22 @@ export const AcknowledgementReceipt: React.FC<AcknowledgementReceiptProps> = ({ 
               </div>
 
               <div className="text-center">
-                <div className="w-28 h-12 border-b border-gray-300 mb-1 flex items-end justify-center pb-1">
-                  <span className="text-xs font-serif font-bold text-gray-700">Swami Nirmal Ji</span>
+                <div className="w-32 h-12 mb-1 flex items-end justify-center pb-1">
+                  <img
+                    src={getImageUrl('certAuthorizedSignature') || '/images/trust-signature.jpg'}
+                    alt="Authorized Signature"
+                    crossOrigin="anonymous"
+                    referrerPolicy="no-referrer"
+                    className="max-h-full max-w-full object-contain"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = '/images/trust-signature.jpg';
+                    }}
+                  />
                 </div>
-                <p className="text-[11px] font-bold text-gray-500">Authorized Signatory</p>
+                <div className="border-t border-gray-300 pt-0.5">
+                  <p className="text-xs font-serif font-bold text-gray-800">स्वामी डॉ. निर्मल जी</p>
+                  <p className="text-[10px] font-bold text-gray-500">Authorized Signatory</p>
+                </div>
               </div>
             </div>
 

@@ -644,27 +644,48 @@ export const DonationReceipt: React.FC<DonationReceiptProps> = ({
           </div>
 
           {/* Official Trust Seal & Authorized Signatory */}
-          <div className="flex items-center gap-6 text-center">
-            {/* Digital Peeth Trust Seal */}
-            <div className="w-20 h-20 rounded-full border-2 border-[#b45309] bg-[#faeedb] flex flex-col items-center justify-center p-1 text-[8px] text-[#5c3316] font-serif leading-tight shadow-sm shrink-0">
-              <Award size={14} className="text-[#c2410c] mb-0.5" />
-              <span className="font-bold text-[8.5px] text-[#3b1e0d]">★ बाबाजी पीठ ★</span>
-              <span className="text-[7.5px] font-bold">महावतार बाबाजी</span>
-              <span className="font-bold text-[7px] text-[#9a3412]">सरल ध्यान योग पीठ</span>
-              <span className="text-[6.5px] text-[#7a5432] uppercase font-mono">Reg: E0001698</span>
+          <div className="flex items-center gap-4 sm:gap-6 text-center">
+            {/* Digital Peeth Trust Official Seal */}
+            <div className="flex flex-col items-center">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center shrink-0">
+                <img
+                  src={getImageUrl('certOfficialSeal') || '/images/trust-seal.png'}
+                  alt="Official Peeth Seal"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-contain filter drop-shadow-sm"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/images/trust-seal.png';
+                  }}
+                />
+              </div>
+              <span className="text-[8px] font-sans font-bold text-[#8a5327] uppercase tracking-tight mt-0.5">
+                Official Seal
+              </span>
             </div>
 
-            {/* Signature Area */}
+            {/* Official Signature Area */}
             <div className="flex flex-col items-center">
-              <div className="h-9 flex items-end justify-center font-serif text-sm font-bold text-[#3b1e0d] border-b-2 border-[#c59b27] px-6 mb-1">
-                Swami Dr. Nirmal Ji
+              <div className="h-12 w-32 sm:w-36 flex items-end justify-center mb-0.5">
+                <img
+                  src={getImageUrl('certAuthorizedSignature') || '/images/trust-signature.jpg'}
+                  alt="Authorized Signature"
+                  crossOrigin="anonymous"
+                  referrerPolicy="no-referrer"
+                  className="max-h-full max-w-full object-contain"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).src = '/images/trust-signature.jpg';
+                  }}
+                />
               </div>
-              <span className="text-[10px] text-[#3d1d0a] font-bold block">
-                अधिकृत हस्ताक्षरकर्ता (Authorized Signatory)
-              </span>
-              <span className="text-[9px] text-[#7a5432] font-semibold block">
-                Sadguru Mahavatar Babaji Saral Dhyan Yog Peeth
-              </span>
+              <div className="w-36 sm:w-40 border-t-2 border-[#c59b27] pt-1">
+                <span className="text-[10px] text-[#3d1d0a] font-bold block leading-tight">
+                  स्वामी डॉ. निर्मल जी महाराज
+                </span>
+                <span className="text-[9px] text-[#7a5432] font-semibold block">
+                  अधिकृत हस्ताक्षरकर्ता (Authorized Signatory)
+                </span>
+              </div>
             </div>
           </div>
         </div>
