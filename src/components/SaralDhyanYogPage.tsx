@@ -24,52 +24,52 @@ import {
 
 const DHIVYA_MOMENTS = [
   {
-    src: '/IMG-20260811-WA0053.jpg',
+    src: '/assets/IMG-20260811-WA0053.jpg',
     title: 'सद्गुरु देव ध्यान साधना दर्शन',
     english: 'Sadguru Divine Meditation Darshan'
   },
   {
-    src: '/IMG-20260811-WA0054.jpg',
+    src: '/assets/IMG-20260811-WA0054.jpg',
     title: 'सरल ध्यान योग दीक्षा सत्र',
     english: 'Saral Dhyan Yog Initiation Session'
   },
   {
-    src: '/IMG-20260811-WA0055.jpg',
+    src: '/assets/IMG-20260811-WA0056.jpg',
     title: 'सामूहिक शून्यता ध्यान शिविर',
     english: 'Mass Shunya Meditation Camp'
   },
   {
-    src: '/IMG-20260811-WA0056.jpg',
+    src: '/assets/IMG-20260811-WA0057.jpg',
     title: 'दिव्य शक्तिपात एवं प्राण संचार',
     english: 'Divine Shaktipat & Pranic Transmission'
   },
   {
-    src: '/IMG-20260811-WA0057.jpg',
+    src: '/assets/IMG-20260811-WA0058.jpg',
     title: 'सद्गुरु प्रवचन एवं मार्गदर्शन',
     english: 'Sadguru Discourse & Guidance'
   },
   {
-    src: '/IMG-20260811-WA0058.jpg',
+    src: '/assets/IMG-20260811-WA0059.jpg',
     title: 'साधकों के साथ दिव्य सत्संग वार्ता',
     english: 'Divine Satsang Interaction'
   },
   {
-    src: '/IMG-20260811-WA0059.jpg',
+    src: '/assets/IMG-20260811-WA0060.jpg',
     title: 'अखंड शांति ध्यान ऊर्जा क्षेत्र',
     english: 'Eternal Meditative Energy Field'
   },
   {
-    src: '/IMG-20260811-WA0060.jpg',
+    src: '/assets/IMG-20260811-WA0061.jpg',
     title: 'शून्यता ध्यान साधना',
     english: 'Shunya Meditation Practice'
   },
   {
-    src: '/IMG-20260811-WA0061.jpg',
+    src: '/assets/IMG-20260811-WA0062.jpg',
     title: 'प्राण योग क्रिया',
     english: 'Prana Yog Kriya'
   },
   {
-    src: '/IMG-20260811-WA0062.jpg',
+    src: '/assets/IMG-20260811-WA0062.jpg',
     title: 'आत्म साक्षात्कार दर्शन',
     english: 'Self Realization Vision'
   }

@@ -49,7 +49,7 @@ export default function AboutSection() {
             >
               <SingleImageUploader imageKey="aboutGuruji" label="गुरुजी फोटो बदलें" badgePosition="top-right">
                 <img
-                  src={getImageUrl('aboutGuruji') || '/assets/IMG-20260806-WA0004-3.jpg'}
+                  src={getImageUrl('aboutGuruji') || '/assets/IMG-20260811-WA0062.jpg'}
                   alt="Guruji Image"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />

@@ -31,7 +31,7 @@ interface MaaBaglamukhiHavanPageProps {
 const HAVAN_IMAGES = [
   {
     id: '1',
-    src: '/images/baglamukhi/IMG-20260811-WA0027.jpg',
+    src: '/assets/IMG-20260811-WA0027.jpg',
     title: 'अभेद्य माँ बगलामुखी विशेष हवन - मुख्य दर्शन',
     titleEn: 'Maa Baglamukhi Vishesh Havan Yajna',
     caption: 'परम पूज्य श्री श्री १००८ अनंत विभूषित महामंडलेश्वर स्वामी डॉ. निर्मल जी महाराज द्वारा पीतांबरा बगलामुखी महायज्ञ',
@@ -40,7 +40,7 @@ const HAVAN_IMAGES = [
   },
   {
     id: '2',
-    src: '/images/baglamukhi/IMG-20260811-WA0023.jpg',
+    src: '/assets/IMG-20260811-WA0023.jpg',
     title: 'पावन यज्ञ कुण्ड एवं आहुति अनुष्ठान',
     titleEn: 'Sacred Fire Kund & Ahuti Ritual',
     caption: 'पीले द्रव्यों, पीली सरसों एवं दुर्लभ जड़ी-बूटियों से माँ बगलामुखी को समर्पित पवित्र आहुतियाँ',
@@ -49,7 +49,7 @@ const HAVAN_IMAGES = [
   },
   {
     id: '3',
-    src: '/images/baglamukhi/IMG-20260811-WA0026.jpg',
+    src: '/assets/IMG-20260811-WA0026.jpg',
     title: 'पूर्णाहुति एवं शक्तिपात आशीर्वाद',
     titleEn: 'Purnahuti & Shaktipat Blessings',
     caption: 'स्वामी डॉ. निर्मल जी महाराज द्वारा साधक कल्याण हेतु विशेष शक्तिपात व भस्म दीक्षा',
@@ -58,7 +58,7 @@ const HAVAN_IMAGES = [
   },
   {
     id: '4',
-    src: '/images/baglamukhi/IMG-20260811-WA0028.jpg',
+    src: '/assets/IMG-20260811-WA0028.jpg',
     title: 'सामूहिक साधना एवं दिव्य सानिध्य',
     titleEn: 'Group Sadhana & Spiritual Presence',
     caption: 'सरल ध्यान योग पीठ में साधकों द्वारा दिव्य हवन में भक्तिमयी सहभागिता',
@@ -67,7 +67,7 @@ const HAVAN_IMAGES = [
   },
   {
     id: '5',
-    src: '/images/baglamukhi/IMG-20260811-WA0029.jpg',
+    src: '/assets/IMG-20260811-WA0029.jpg',
     title: 'हवन आहुति एवं जाप',
     titleEn: 'Havan Ahuti & Chanting',
     caption: 'माँ बगलामुखी के बीज मंत्रों के साथ हवन कुण्ड में आहुति',
@@ -76,7 +76,7 @@ const HAVAN_IMAGES = [
   },
   {
     id: '6',
-    src: '/images/baglamukhi/IMG-20260811-WA0030.jpg',
+    src: '/assets/IMG-20260811-WA0030.jpg',
     title: 'दिव्य सानिध्य',
     titleEn: 'Spiritual Presence',
     caption: 'सरल ध्यान योग पीठ में दिव्य हवन की झलक',
@@ -85,7 +85,7 @@ const HAVAN_IMAGES = [
   },
   {
     id: '7',
-    src: '/images/baglamukhi/IMG-20260804-WA0066.jpg',
+    src: '/assets/IMG-20260804-WA0037.jpg',
     title: 'माँ बगलामुखी विशेष हवन',
     titleEn: 'Maa Baglamukhi Vishesh Havan',
     caption: 'माँ बगलामुखी विशेष हवन की पावन झलक',
@@ -94,39 +94,12 @@ const HAVAN_IMAGES = [
   },
   {
     id: '8',
-    src: '/images/baglamukhi/IMG-20260811-WA0024.jpg',
+    src: '/assets/IMG-20260811-WA0024.jpg',
     title: 'दिव्य हवन दर्शन',
     titleEn: 'Divine Havan Darshan',
     caption: 'माँ बगलामुखी विशेष हवन की पावन झलक',
     captionEn: 'Glimpses of Maa Baglamukhi Vishesh Havan',
     tag: 'हवन'
-  },
-  {
-    id: '9',
-    src: '/images/baglamukhi/IMG-20260811-WA0031.jpg',
-    title: 'विशेष अनुष्ठान',
-    titleEn: 'Special Ritual',
-    caption: 'माँ बगलामुखी विशेष अनुष्ठान एवं हवन',
-    captionEn: 'Glimpses of Maa Baglamukhi Vishesh Havan',
-    tag: 'अनुष्ठान'
-  },
-  {
-    id: '10',
-    src: '/images/baglamukhi/IMG-20260811-WA0033.jpg',
-    title: 'सामूहिक अनुष्ठान',
-    titleEn: 'Group Rituals',
-    caption: 'माँ बगलामुखी विशेष हवन की पावन झलक',
-    captionEn: 'Glimpses of Maa Baglamukhi Vishesh Havan',
-    tag: 'साधना'
-  },
-  {
-    id: '11',
-    src: '/images/baglamukhi/IMG-20260811-WA0034.jpg',
-    title: 'हवन पूर्णाहुति',
-    titleEn: 'Havan Purnahuti',
-    caption: 'हवन की पूर्णाहुति एवं महाआरती की पावन झलक',
-    captionEn: 'Glimpses of Maa Baglamukhi Vishesh Havan Purnahuti',
-    tag: 'आहुति'
   }
 ];
 
@@ -171,20 +144,20 @@ export default function MaaBaglamukhiHavanPage({
     (img) => img.category === 'baglamukhi' || img.category === 'babaji'
   );
 
-  const dynamicHavanImages = userUploadedBaglamukhi.length > 0
-    ? [
-        ...userUploadedBaglamukhi.map((img) => ({
-          id: img.id,
-          src: img.src,
-          title: img.title || 'पावन हवन दर्शन',
-          titleEn: img.title || 'Divine Havan Darshan',
-          caption: 'माँ बगलामुखी विशेष हवन एवं दिव्य अनुष्ठान',
-          captionEn: 'Glimpses of Maa Baglamukhi Vishesh Havan',
-          tag: 'पावन दर्शन'
-        })),
-        ...baseHavanImages
-      ]
-    : baseHavanImages;
+  const dynamicHavanImages = [
+    ...baseHavanImages,
+    ...userUploadedBaglamukhi
+      .filter((img) => img.src && !img.src.includes('/images/baglamukhi') && !img.src.includes('/images/baglamukhi-havan'))
+      .map((img) => ({
+        id: img.id,
+        src: img.src,
+        title: img.title || 'पावन हवन दर्शन',
+        titleEn: img.title || 'Divine Havan Darshan',
+        caption: 'माँ बगलामुखी विशेष हवन एवं दिव्य अनुष्ठान',
+        captionEn: 'Glimpses of Maa Baglamukhi Vishesh Havan',
+        tag: 'पावन दर्शन'
+      }))
+  ];
 
   useEffect(() => {
     const maxHero = Math.min(5, dynamicHavanImages.length);

@@ -855,7 +855,7 @@ export default function AdminPortalModal({ isOpen, onClose }: AdminPortalModalPr
                         if (selectedImageCategory === 'nav' && !['headerLogo', 'footerLogo', 'whatsappQr'].includes(meta.key)) return false;
                         if (selectedImageCategory === 'hero' && !['heroBg', 'heroPortrait'].includes(meta.key)) return false;
                         if (selectedImageCategory === 'about' && !['guruPortrait', 'aboutGuruji', 'aboutBabaji', 'aboutMain'].includes(meta.key)) return false;
-                        if (selectedImageCategory === 'seva' && !['visionSection', 'seva1Image', 'seva2Image', 'seva3Image', 'seva4Image'].includes(meta.key)) return false;
+                        if (selectedImageCategory === 'seva' && !['visionSection', 'seva1Image', 'seva2Image', 'seva3Image', 'seva4Image', 'seva5Image', 'seva6Image', 'seva7Image'].includes(meta.key)) return false;
                         if (selectedImageCategory === 'baglamukhi' && !meta.key.startsWith('baglamukhi')) return false;
                         if (selectedImageCategory === 'dhyan' && !meta.key.startsWith('dhyanYog')) return false;
                         if (selectedImageCategory === 'future' && !meta.key.startsWith('futureProject')) return false;

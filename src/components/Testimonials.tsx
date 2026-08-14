@@ -10,21 +10,21 @@ export default function Testimonials() {
       quote: "ध्यान से मेरे जीवन में बहुत सकारात्मक बदलाव आया है। मन शांत रहता है और काम में एकाग्रता बढ़ी है।",
       name: "विजय पाटिल",
       city: "नाशिक",
-      img: getImageUrl('testimonial1') || "/assets/indian_sadhak1.jpg",
+      img: getImageUrl('testimonial1') || "/assets/indian_sadhak_new1.jpg",
       role: "साधक"
     },
     {
       quote: "यहाँ सिखाई गई साधना सरल और प्रभावी है। रोजमर्रा के जीवन में आनंद और समाधान मिलता है।",
       name: "स्वाति जोशी",
       city: "पुणे",
-      img: getImageUrl('testimonial2') || "/assets/indian_sadhika2.jpg",
+      img: getImageUrl('testimonial2') || "/assets/indian_sadhika_new2.jpg",
       role: "साधिका"
     },
     {
       quote: "महावतार बाबाजी की कृपा से मुझे सही मार्ग मिला। यह संस्था बहुत प्रेरणादायक है।",
       name: "राहुल देशमुख",
       city: "औरंगाबाद",
-      img: getImageUrl('testimonial3') || "/assets/indian_sadhak3.jpg",
+      img: getImageUrl('testimonial3') || "/assets/indian_sadhak_new3.jpg",
       role: "साधक"
     }
   ];

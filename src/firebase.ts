@@ -7,7 +7,7 @@ const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
 
 const dbId = firebaseConfig.firestoreDatabaseId;
 
-let firestoreDb;
+let firestoreDb: any;
 try {
   firestoreDb = dbId
     ? initializeFirestore(
